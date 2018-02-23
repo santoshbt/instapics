@@ -1,0 +1,9 @@
+%h1 From Homepage
+- if session[:access_token]   
+    %a{:href => "/logout"} Logout 
+- else
+    %a{:href => "/connect"} Connect with Instagram 
+    
+- unless @media.blank?  
+    - @media.each do |media|
+        = media.images.thumbnail

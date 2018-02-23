@@ -10,5 +10,7 @@
 
   <body>
     <%= yield %>
+
+    <%= js add_gritter(flash[:notice], title: "InstaPic says...", sticky: false, time: 3000)%>
   </body>
 </html>
