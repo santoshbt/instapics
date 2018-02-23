@@ -2,3 +2,34 @@
 @import "bootstrap";
 @import "home.scss";
 @import "gritter";
+
+.content {
+    margin-top: 50px; /* 50px is the height of the navbar - change this if the navbarn height changes */
+}
+
+.jumbotron{    
+    background-color: #88d5ec !important;
+    height: 200px;
+}
+
+.btn.btn-warning{
+    float: right;
+    margin-right: 9px;
+    margin-top: 9px;
+}
+
+.profilePic{
+    border-style: groove;
+    margin-top: 10px;
+    border-bottom-color: azure;
+    border-radius: 1px;
+    width: 65px;
+}
+
+.myPics{
+    margin-top: 20px;
+}
+
+.loader{
+    padding-left: 44%;
+}

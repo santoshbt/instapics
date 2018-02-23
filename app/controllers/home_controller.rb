@@ -6,6 +6,7 @@ class HomeController < ApplicationController
       @user = @client.user
       @username = @user.full_name
       @recent_photos = @client.user_recent_media
+      @profile_pic = @recent_photos.first
     end
   end
 

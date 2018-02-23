@@ -1,11 +1,20 @@
+- if session[:access_token].blank?
+    .content
+        .jumbotron
+            %a.btn.btn-success.btn-lg{:href => "/connect", :onclick=>"displayLoader()"} Connect with Instagram 
 
-- if session[:access_token]   
-    %a{:href => "/logout"} Logout 
-- else
-    %a{:href => "/connect"} Connect with Instagram 
+%span.loader{:style => "display:none;"}
+    %h4 Loading...
 
 - unless session[:access_token].blank?
-    %h2= "Welcome " + @username.titleize 
+    %h2
+        %span.label.label-primary= "Welcome " + @username.titleize 
+        .profilePic 
+            %img{:src => "#{@profile_pic.user.profile_picture}", :width => "60"}
+    .myPics        
+        - @recent_photos.each do |media|
+            .col-sm-6.col-md-4
+                .thumbnail
+                    %img{:src => "#{media.images.low_resolution.url}"}
 
-    - @recent_photos.each do |media|
-        %img{:src => "#{media.images.thumbnail.url}"}
+                    

@@ -6,11 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
+      function displayLoader(){
+        $(".loader").css("display", "block");
+      }
+    </script>
   </head>
 
   <body>
-    <%= yield %>
-
-    <%= js add_gritter(flash[:notice], title: "InstaPic says...", sticky: false, time: 3000)%>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= render 'shared/header'%>                     
+            <%= yield %>           
+        </div>
+      </div>
+    </div>
+      <%= js add_gritter(flash[:notice], title: "InstaPic says...", sticky: false, time: 3000)%>
   </body>
 </html>
