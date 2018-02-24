@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  before_filter :create_instagram_client, only: :index
+  before_action :create_instagram_client, only: :index
 
   def index   
     unless session[:access_token].blank?
