@@ -16,7 +16,7 @@ describe 'navigate' do
     describe 'homepage when user is not logged in' do
         it 'lists the user photos' do
             access_token = "87bf48e454cb4119a703f426c1b37ccf"
-            visit("http://localhost:3000/#access_token=#{access_token}")
+            visit("#{APP_URL}#access_token=#{access_token}")
             expect(page.status_code).to eq(200)            
         end
     end
