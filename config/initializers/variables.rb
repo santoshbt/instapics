@@ -1,2 +1,2 @@
-APP_URL = "http://localhost:3000/"
+APP_URL = "https://santoshinstapics.herokuapp.com/"
 CALLBACK_URL =  APP_URL + "oauth/callback"
